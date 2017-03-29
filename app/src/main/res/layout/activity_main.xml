@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/zd_153"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d0d0d0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/main_sms_all"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/main_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/more" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zd_182"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ddd"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/main_selectAll_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="6dp"
+            android:layout_gravity="center_vertical"
+            android:checked="true"
+            android:text="@string/select_all"
+            android:button="@drawable/selector_checkbox" />
+
+
+
+        <Button
+            android:id="@+id/main_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="100dp"
+            android:layout_weight="1"
+            android:text="@string/delete_sms" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/main_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/zd_182"
+        android:layout_below="@+id/zd_153"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false" />
+
+
+</RelativeLayout>
